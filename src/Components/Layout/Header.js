@@ -14,7 +14,7 @@ export default class Header extends Component {
               <div style={{display: 'inline-block'}}>
                 <ul style={navStyle}>
                   <li style={liStyle}><Link to='/blog' style={linkStyle}>Blog</Link></li>
-                  <li style={liStyle}><Link to='/mywork' style={linkStyle}>My Work</Link></li>
+                  <li style={liStyle}><a href='https://github.com/RahulKraken?tab=repositories' style={linkStyle}>My Work</a></li>
                   <li style={liStyle}><a href={Resume} style={linkStyle} downlaod>Resume</a></li>
                   <li style={liStyle}><Link to='/' style={linkStyle}>About</Link></li>
                   <li style={liStyle}><Link to='/contact' style={linkStyle}>Contact Me</Link></li>
