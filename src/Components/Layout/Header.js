@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
+
+import Resume from '../../assets/Resume.pdf'
 
 export default class Header extends Component {
   render() {
@@ -13,7 +15,7 @@ export default class Header extends Component {
                 <ul style={navStyle}>
                   <li style={liStyle}><Link to='/blog' style={linkStyle}>Blog</Link></li>
                   <li style={liStyle}><Link to='/mywork' style={linkStyle}>My Work</Link></li>
-                  <li style={liStyle}><Link to='/resume' style={linkStyle}>Resume</Link></li>
+                  <li style={liStyle}><a href={Resume} style={linkStyle} downlaod>Resume</a></li>
                   <li style={liStyle}><Link to='/' style={linkStyle}>About</Link></li>
                   <li style={liStyle}><Link to='/contact' style={linkStyle}>Contact Me</Link></li>
                 </ul>
