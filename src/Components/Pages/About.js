@@ -8,11 +8,13 @@ export default class About extends Component {
     return (
       // content
       <div>
-        <div className='upperPart' style={upperStyle}>
-          <div>
-            <img src={ProfileImage} alt='Rahul Kumar' style={profileImageStyle}/>
-          </div>
-          <div style={headlineStyle}>Hey, I'm<br/><span style={torquoise}>Rahul</span>.
+        <div style={upperStyle}>
+          <div style={containerStyle}>
+            <div style={{flex: '1'}}>
+              <img src={ProfileImage} alt='Rahul Kumar' style={profileImageStyle}/>
+            </div>
+            <div style={headlineStyle}>Hey, I'm<br/><span style={torquoise}>Rahul</span>.
+            </div>
           </div>
         </div>
         <div style={lowerStyle}>
@@ -26,10 +28,11 @@ export default class About extends Component {
 }
 
 // styles
-const upperStyle = {
+const containerStyle = {
   display: 'flex',
-  alignItems: 'center',
-  paddingTop: '50px'
+  textAlign: 'center',
+  paddingTop: '50px',
+  width: '1300px'
 }
 
 const lowerStyle = {
@@ -37,20 +40,19 @@ const lowerStyle = {
   paddingTop: '100px'
 }
 
+const upperStyle = {
+  display: 'inline-block'
+}
+
 const profileImageStyle = {
-  display: 'block',
   height: '368px',
   width: '374px',
-  flex: '1',
-  marginLeft: '396px'
 }
 
 const headlineStyle = {
-  paddingTop: '50px',
-  display: 'block',
+  paddingTop: '40px',
   fontFamily: 'Satisfy',
   fontSize: '125px',
-  marginLeft: '231px',
   flex: '1'
 }
 
