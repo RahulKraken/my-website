@@ -7,7 +7,7 @@ export default class About extends Component {
   render() {
     return (
       // content
-      <div>
+      <div style={{textAlign: 'center'}}>
         <div style={upperStyle}>
           <div style={containerStyle}>
             <div style={{flex: '1'}}>
