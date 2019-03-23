@@ -5,23 +5,48 @@ export default class Header extends Component {
   render() {
     return (
       <div>
+        {/* nav bar */}
         <header style={headerStyle}>
-            <h1>Rahul Kumar</h1><br/>
-            <Link to="/blog" style={linkStyle}>Blog</Link> | <Link to="/mywork" style={linkStyle}>My Work</Link> | <Link to="/resume" style={linkStyle}>Resume</Link> | <Link to="/" style={linkStyle}>About</Link> | <Link to="/contact" style={linkStyle}>Contact Me</Link>
+            <nav>
+              {/* inline-block to center it */}
+              <div style={{display: 'inline-block'}}>
+                <ul style={navStyle}>
+                  <li style={liStyle}><Link to='/blog' style={linkStyle}>Blog</Link></li>
+                  <li style={liStyle}><Link to='/mywork' style={linkStyle}>My Work</Link></li>
+                  <li style={liStyle}><Link to='/resume' style={linkStyle}>Resume</Link></li>
+                  <li style={liStyle}><Link to='/' style={linkStyle}>About</Link></li>
+                  <li style={liStyle}><Link to='/contact' style={linkStyle}>Contact Me</Link></li>
+                </ul>
+              </div>
+            </nav>
         </header>
       </div>
     )
   }
 }
 
+
+// styles
+const navStyle = {
+  linkStyle: 'none'
+}
+
+const liStyle = {
+  display: 'inline',
+  float: 'left',
+  marginLeft: '40px'
+}
+
 const linkStyle = {
-    textDecoration: 'none',
-    color: '#fff'
+  display: 'block',
+  textDecoration: 'none',
+  color: '#000'
 }
 
 const headerStyle = {
-    backgroundColor: '#333',
-    color: '#fff',
-    textAlign: 'center',
-    padding: '10px'
+  fontFamily: 'Raleway',
+  color: '#000',
+  textAlign: 'center',
+  padding: '10px',
+  paddingTop: '46px'
 }
